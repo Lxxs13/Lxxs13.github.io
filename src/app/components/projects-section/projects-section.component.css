@@ -1,0 +1,64 @@
+#main {
+    width: 100%;
+    background-color: var(--dark-xx);
+  }
+
+.bar,
+.bar-inferior {
+  width: 15rem; /* Ajusta el ancho según tus necesidades */
+  height: 2.5rem; /* Ajusta la altura según tus necesidades */
+  background: linear-gradient(90deg, var(--dark-xx) 10%, var(--pink-dark));
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.bar {
+  top: 25%;
+  left: 5%;
+}
+
+.bar-inferior {
+  bottom: 15%; /* Ajusta la posición inferior según tus necesidades */
+  right: 1%; /* Ajusta la posición derecha según tus necesidades */
+}
+
+/* Ajusta el diseño para pantallas pequeñas */
+@media (max-width: 600px) {
+  .bar,
+  .bar-inferior {
+    width: 30%; /* Ajusta el ancho para pantallas pequeñas */
+    height: 3%; /* Ajusta la altura para pantallas pequeñas */
+  }
+
+  .example-card {
+    max-width: 100%; /* Hace que las tarjetas ocupen el 100% del ancho en pantallas pequeñas */
+  }
+}
+
+.example-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 16px; /* Ajusta el margen según tus necesidades */
+    box-sizing: border-box;
+  }
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.cards-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+.div-tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;#main {
+        width: 100%;
+        background-color: var(--dark-xx);
+      }
+    padding: 8px 0;
+}

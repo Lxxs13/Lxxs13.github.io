@@ -1,0 +1,21 @@
+.custom-primary {
+  background-color: var(--dark-x);
+}
+
+.navigation-links {
+  display: flex;
+  gap: 32px;
+}
+
+.navigation-links span {
+  cursor: pointer;
+}
+
+.toolbar-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

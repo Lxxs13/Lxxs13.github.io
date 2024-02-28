@@ -1,0 +1,31 @@
+<div id="main">
+    <div class="div-container">
+        <div style="display: grid;">
+            <div style="width: 100%; place-self: center;">
+                <span class="h1-bold">Somos expertos en la
+                    <span class="span-gradient-color">creación de web apps</span>
+                </span>
+                <br>
+                <span class="lead-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                    distinctio
+                    molestiae earum
+                    officiis laborum quibusdam alias tenetur culpa aut, veniam ipsam eum itaque, illum harum ex odit
+                    nam
+                    ad
+                    pariatur.
+                </span>
+                <div class="section-buttons">
+                    <button mat-raised-button class="button-contactar paragraph-bold" style="font-size: 16px;">
+                        Contáctame
+                    </button>
+                    <a href="https://github.com/lxxs13" target="_blank">
+                        <button mat-raised-button>Visita mi perfil de GitHub</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="img" *ngIf="!isHandset">
+            <img src="../../../assets/images/laptop.jpg" alt="">
+        </div>
+    </div>
+</div>
