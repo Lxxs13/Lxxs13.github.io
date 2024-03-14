@@ -1,7 +1,7 @@
 #main {
-    width: 100%;
-    background-color: var(--dark-xx);
-  }
+  width: 100%;
+  background-color: var(--dark-xx);
+}
 
 .bar,
 .bar-inferior {
@@ -32,15 +32,16 @@
 
   .example-card {
     max-width: 100%; /* Hace que las tarjetas ocupen el 100% del ancho en pantallas pequeñas */
+    padding: 8px 0;
   }
 }
 
 .example-card {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 16px; /* Ajusta el margen según tus necesidades */
-    box-sizing: border-box;
-  }
+  width: 100%;
+  max-width: 300px;
+  margin:8px 0; /* Ajusta el margen según tus necesidades */
+  box-sizing: border-box;
+}
 
 .example-header-image {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
@@ -48,17 +49,44 @@
 }
 
 .cards-projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .div-tittle {
-    display: flex;
-    justify-content: center;
-    align-items: center;#main {
-        width: 100%;
-        background-color: var(--dark-xx);
-      }
-    padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
 }
+
+#main {
+  width: 100%;
+  background-color: var(--dark-xx);
+}
+
+.div-ver-mas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.a-ver-mas-github {
+  color: #6000b9;
+  font-size: x-large;
+}
+
+a {
+  color: #6000b9; /* Utilizar el color heredado (normalmente negro) */
+}
+
+/* Estilo para el enlace visitado */
+a:visited {
+  color: #6000b9; /* Utilizar el color heredado para enlaces visitados */
+}
+
+.img-size {
+    width: 30px;
+  }
