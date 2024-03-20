@@ -33,6 +33,7 @@
   .example-card {
     max-width: 100%; /* Hace que las tarjetas ocupen el 100% del ancho en pantallas pequeñas */
     padding: 8px 0;
+    z-index: 0;
   }
 }
 
@@ -41,6 +42,7 @@
   max-width: 300px;
   margin:8px 0; /* Ajusta el margen según tus necesidades */
   box-sizing: border-box;
+  z-index: 0;
 }
 
 .example-header-image {
@@ -52,6 +54,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  z-index: 0;
 }
 
 .div-tittle {

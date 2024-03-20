@@ -1,11 +1,15 @@
 <div id="main">
-    <form class="form">
-        <div>
-            <span class="title">Comunicate conmigo</span>
-            <input type="text" placeholder="Tu correo electrónico" class="input">
-            <textarea placeholder="Tu mensaje"></textarea>
-
-            <button>Enviar</button>
-        </div>
-    </form>
+    <div id="form-main-contact">
+        <form class="form">
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="text" id="email" name="email" required="">
+            </div>
+            <div class="form-group">
+                <label for="textarea">Ingrese su mensaje</label>
+                <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
+            </div>
+            <button class="form-submit-btn" type="submit">Enviar</button>
+        </form>
+    </div>
 </div>

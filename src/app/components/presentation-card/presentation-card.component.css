@@ -12,6 +12,7 @@
   -webkit-background-clip: text; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
   color: transparent; /* Hace el texto transparente para que el gradiente sea visible */
   display: inline-block; /* Asegura que el fondo degradado afecte solo al texto y no a todo el bloque */
+  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
 }
 
 span.lead-light {
@@ -56,8 +57,13 @@ img {
 }
 
 .section-buttons {
-  padding-top: 24px;
   display: flex;
+  justify-content: center;
+  align-content: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 24px;
   gap: 8px;
 }
 

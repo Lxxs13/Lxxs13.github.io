@@ -1,5 +1,6 @@
 .custom-primary {
   background-color: var(--dark-x);
+  position: sticky;
 }
 
 .navigation-links {
@@ -18,4 +19,12 @@
   align-content: flex-end;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }

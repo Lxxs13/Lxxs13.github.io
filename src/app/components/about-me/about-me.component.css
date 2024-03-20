@@ -1,0 +1,62 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  justify-content: space-evenly;
+  background-color: var(--dark-xx);
+}
+
+.h1-bold{
+    color: #FFFFFF;
+}
+
+/* Estilos base para todas las imágenes */
+.img-tech {
+  width: calc(5%);
+  /* min-width: 1rem */
+  transition: filter 0.3s; /* Transición suave para el efecto */
+}
+
+/* Estilos cuando el elemento está en hover */
+.img-tech:hover {
+  filter: brightness(1.5); /* Aumenta el brillo del elemento */
+}
+
+.div-skills:hover > :not(:hover) {
+  filter: brightness(0.5);
+}
+.delay-1 {
+  animation-delay: 0.5s; /* Retraso de 0.5 segundos */
+}
+
+.delay-2 {
+  animation-delay: 1s; /* Retraso de 1 segundo */
+}
+
+.delay-3 {
+  animation-delay: 1.5s; /* Retraso de 1.5 segundos */
+}
+
+.delay-4 {
+  animation-delay: 2s; /* Retraso de 1.5 segundos */
+}
+
+.delay-5 {
+  animation-delay: 2.5s; /* Retraso de 1.5 segundos */
+}
+
+.delay-6 {
+  animation-delay: 3s; /* Retraso de 1.5 segundos */
+}
+
+.delay-7 {
+  animation-delay: 3.5s; /* Retraso de 1.5 segundos */
+}
+
+#div-technologies {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 30px;
+  padding: 40px 0;
+}
