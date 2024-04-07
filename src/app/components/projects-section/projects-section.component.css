@@ -38,9 +38,9 @@
 }
 
 .example-card {
-  width: 100%;
-  max-width: 300px;
-  margin:8px 0; /* Ajusta el margen según tus necesidades */
+  width: 350px;
+  /* max-width: 300px; */
+  margin: 8px 0; /* Ajusta el margen según tus necesidades */
   box-sizing: border-box;
   z-index: 0;
 }
@@ -91,5 +91,32 @@ a:visited {
 }
 
 .img-size {
-    width: 30px;
-  }
+  width: 30px;
+}
+
+.button-project {
+  margin-top: 4px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, var(--pink-light), var(--pink-dark));
+  cursor: pointer;
+}
+
+.chipset-tech {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.title-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-descripcion-proyecto {
+  text-align: justify;
+  color: #FFFFFF;
+}

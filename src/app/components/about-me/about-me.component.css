@@ -6,51 +6,63 @@ div {
   background-color: var(--dark-xx);
 }
 
-.h1-bold{
-    color: #FFFFFF;
+.h1-bold {
+  color: #ffffff;
 }
 
 /* Estilos base para todas las imágenes */
 .img-tech {
-  width: calc(5%);
-  /* min-width: 1rem */
-  transition: filter 0.3s; /* Transición suave para el efecto */
+  width: calc(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s; 
 }
 
-/* Estilos cuando el elemento está en hover */
 .img-tech:hover {
-  filter: brightness(1.5); /* Aumenta el brillo del elemento */
+  filter: opacity(1);
+}
+
+.div-skills {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 36px;
+    width: 100%;
+    padding-top: 16px;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .div-skills:hover > :not(:hover) {
-  filter: brightness(0.5);
+  filter: opacity(0.3);
 }
 .delay-1 {
-  animation-delay: 0.5s; /* Retraso de 0.5 segundos */
+  animation-delay: 0.5s;
 }
 
 .delay-2 {
-  animation-delay: 1s; /* Retraso de 1 segundo */
+  animation-delay: 1s;
 }
 
 .delay-3 {
-  animation-delay: 1.5s; /* Retraso de 1.5 segundos */
+  animation-delay: 1.5s;
 }
 
 .delay-4 {
-  animation-delay: 2s; /* Retraso de 1.5 segundos */
+  animation-delay: 2s;
 }
 
 .delay-5 {
-  animation-delay: 2.5s; /* Retraso de 1.5 segundos */
+  animation-delay: 2.5s;
 }
 
 .delay-6 {
-  animation-delay: 3s; /* Retraso de 1.5 segundos */
+  animation-delay: 3s;
 }
 
 .delay-7 {
-  animation-delay: 3.5s; /* Retraso de 1.5 segundos */
+  animation-delay: 3.5s;
 }
 
 #div-technologies {
