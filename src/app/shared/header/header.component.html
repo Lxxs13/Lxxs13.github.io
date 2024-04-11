@@ -1,18 +1,20 @@
-<mat-toolbar class="custom-primary">
-    <div class="toolbar-display">
-        <div>
-            <button mat-icon-button *ngIf="isHandset" (click)="toggleMenu()">
-                <mat-icon>menu</mat-icon>
-            </button>
-
-            <span class="paragraph-bold">Luis Quiroz Schlemm</span>
+<header>
+    <mat-toolbar class="custom-primary">
+        <div class="toolbar-display">
+            <div>
+                <button mat-icon-button *ngIf="isHandset" (click)="toggleMenu()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+    
+                <span class="paragraph-bold">Luis Quiroz Schlemm</span>
+            </div>
+    
+            <div class="navigation-links" *ngIf="showNavigation()">
+                <span class="paragraph-light" (click)="scrollToSection('presentation')">Inicio</span>
+                <span class="paragraph-light" (click)="scrollToSection('about-me')">Sobre mí</span>
+                <span class="paragraph-light" (click)="scrollToSection('my-projects')">Proyectos</span>
+                <span class="paragraph-bold" (click)="scrollToSection('contact-me')">Contáctame</span>
+            </div>
         </div>
-
-        <div class="navigation-links" *ngIf="showNavigation()">
-            <span class="paragraph-light">Inicio</span>
-            <span class="paragraph-light">Sobre mí</span>
-            <span class="paragraph-light">Proyectos</span>
-            <span class="paragraph-bold">Contáctame</span>
-        </div>
-    </div>
-</mat-toolbar>
+    </mat-toolbar>
+</header>

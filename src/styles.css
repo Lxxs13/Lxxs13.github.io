@@ -11,6 +11,11 @@
   font-family: "Mulish", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+
+}
+
 html,
 body {
   margin: 0;

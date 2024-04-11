@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MaterialModule } from '../../material/material.module';
@@ -12,7 +12,6 @@ import { MaterialModule } from '../../material/material.module';
 })
 export class HeaderComponent implements OnInit {
   isHandset: boolean = false;
-
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
@@ -31,6 +30,13 @@ export class HeaderComponent implements OnInit {
   showNavigation(): boolean {
     // Devuelve true si el dispositivo no es un dispositivo móvil (es decir, es de escritorio)
     return !this.isHandset;
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+
+    if (element)
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
 }
