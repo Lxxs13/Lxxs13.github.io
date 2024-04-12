@@ -2,19 +2,33 @@
     <mat-toolbar class="custom-primary">
         <div class="toolbar-display">
             <div>
-                <button mat-icon-button *ngIf="isHandset" (click)="toggleMenu()">
-                    <mat-icon>menu</mat-icon>
-                </button>
-    
                 <span class="paragraph-bold">Luis Quiroz Schlemm</span>
             </div>
-    
+
             <div class="navigation-links" *ngIf="showNavigation()">
                 <span class="paragraph-light" (click)="scrollToSection('presentation')">Inicio</span>
                 <span class="paragraph-light" (click)="scrollToSection('about-me')">Sobre mí</span>
                 <span class="paragraph-light" (click)="scrollToSection('my-projects')">Proyectos</span>
                 <span class="paragraph-bold" (click)="scrollToSection('contact-me')">Contáctame</span>
             </div>
+
+            <button mat-icon-button *ngIf="!showNavigation()" [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="scrollToSection('presentation')">
+                    <span>Inicio</span>
+                </button>
+                <button mat-menu-item (click)="scrollToSection('about-me')">
+                    <span>Sobre mí</span>
+                </button>
+                <button mat-menu-item (click)="scrollToSection('my-projects')">
+                    <span>Proyectos</span>
+                </button>
+                <button mat-menu-item (click)="scrollToSection('contact-me')">
+                    <span>Contáctame</span>
+                </button>
+            </mat-menu>
         </div>
     </mat-toolbar>
 </header>

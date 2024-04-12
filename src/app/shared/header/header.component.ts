@@ -1,12 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MaterialModule } from '../../material/material.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MatButtonModule, MatMenuModule, MatIconModule, MatToolbarModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -22,13 +25,7 @@ export class HeaderComponent implements OnInit {
       });
   }
 
-  toggleMenu() {
-    // Implementa la lógica para mostrar/ocultar el menú en dispositivos móviles
-    // Puedes utilizar un servicio para comunicarte con el componente principal o emitir un evento.
-  }
-
   showNavigation(): boolean {
-    // Devuelve true si el dispositivo no es un dispositivo móvil (es decir, es de escritorio)
     return !this.isHandset;
   }
 
