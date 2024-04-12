@@ -2,9 +2,11 @@
     <div class="div-container">
         <div style="display: grid;">
             <div style="width: 100%; place-self: center;">
-                <span class="h1-bold">Somos expertos en la
-                    <span class="span-gradient-color">creación de web apps</span>
-                </span>
+                <div class="div-messages">
+                    <div class="h1-bold message">Somos expertos en la creaci&oacute;n de
+                        <span class="span-gradient-color" id="expert"></span>
+                    </div>
+                </div>
                 <br>
                 <span class="lead-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
                     distinctio
@@ -32,9 +34,6 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div id="img" *ngIf="!isHandset">
-            <img src="assets/laptop.jpg" alt="" >
         </div>
     </div>
 </div>
