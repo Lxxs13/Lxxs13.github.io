@@ -17,52 +17,28 @@ div {
   justify-content: center;
   align-items: center;
   transition: filter 0.3s; 
+  transition: transform 0.3s; 
 }
 
 .img-tech:hover {
   filter: opacity(1);
+  transform: translateY(-2rem);
 }
 
 .div-skills {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 36px;
-    width: 100%;
-    padding-top: 16px;
-    align-content: space-between;
-    align-items: center;
-    justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 36px;
+  width: 100%;
+  padding-top: 16px;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-items: center;
 }
 
 .div-skills:hover > :not(:hover) {
   filter: opacity(0.3);
-}
-.delay-1 {
-  animation-delay: 0.5s;
-}
-
-.delay-2 {
-  animation-delay: 1s;
-}
-
-.delay-3 {
-  animation-delay: 1.5s;
-}
-
-.delay-4 {
-  animation-delay: 2s;
-}
-
-.delay-5 {
-  animation-delay: 2.5s;
-}
-
-.delay-6 {
-  animation-delay: 3s;
-}
-
-.delay-7 {
-  animation-delay: 3.5s;
 }
 
 #div-technologies {

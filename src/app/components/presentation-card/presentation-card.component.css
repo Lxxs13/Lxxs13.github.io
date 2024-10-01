@@ -3,9 +3,7 @@
 }
 
 .span-gradient-color {
-  background: linear-gradient(90deg,
-      var(--pink-light),
-      var(--pink-dark));
+  background: linear-gradient(90deg, var(--pink-light), var(--pink-dark));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -27,7 +25,7 @@ span.lead-light {
   flex-wrap: wrap-reverse;
   width: 100%;
   box-sizing: border-box;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .div-container div {
@@ -42,15 +40,12 @@ span.lead-light {
 }
 
 img {
-  width: 35vw;
-  height: auto;
-  border-radius: 16px;
+  width: 277px;
+  border-radius: 2rem;
 }
 
 .button-contactar {
-  background: linear-gradient(90deg,
-      var(--pink-light),
-      var(--pink-dark));
+  background: linear-gradient(90deg, var(--pink-light), var(--pink-dark));
   /* Define tu gradiente de color */
 }
 
@@ -77,4 +72,21 @@ img {
 
 .message {
   width: 100%;
+}
+
+figure {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.profile-description {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#img-profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

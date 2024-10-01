@@ -1,52 +1,42 @@
-import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatButtonModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css']
 })
-export class ContactMeComponent implements OnInit, AfterViewInit {
+export class ContactMeComponent implements OnInit {
+  nameFormControl = new FormControl('', [Validators.required]);
+  subjectFormControl = new FormControl('', [Validators.required]);
+  messageFormControl = new FormControl('', [Validators.required]);
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   constructor() { }
 
-  ngAfterViewInit(): void {
-    // Opciones para el IntersectionObserver
-    const options: IntersectionObserverInit = {
-      root: null, // El viewport del navegador es el contenedor
-      rootMargin: '0px', // No se aplica margen adicional
-      threshold: 1 // Cuando al menos el 50% del elemento está en la vista
-    };
-
-    // Crear un nuevo IntersectionObserver
-    const observer = new IntersectionObserver(this.handleIntersection, options);
-
-    // Elemento que deseas observar
-    const miComponente = document.querySelector('#form-main-contact');
-
-    // Observar el elemento
-    if (miComponente) {
-      observer.observe(miComponente);
-    }
-  }
-
-  // Método para manejar la entrada en la vista
-  private handleIntersection(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Si el componente está en la vista, aplicar la animación
-        entry.target.classList.add('animate__animated', 'animate__headShake');
-        // Una vez que se ha aplicado la animación, ya no necesitamos observar el componente
-        observer.unobserve(entry.target);
-      }
-    });
-
-  }
-
   ngOnInit(): void {
 
+  }
+
+  onSendEmail() {
+    if (this.emailFormControl.invalid || this.nameFormControl.invalid || this.subjectFormControl.invalid || this.messageFormControl.invalid) {
+      this.nameFormControl.markAsTouched();
+      this.subjectFormControl.markAsTouched();
+      this.messageFormControl.markAsTouched();
+      this.emailFormControl.markAllAsTouched();
+
+      return;
+    }
+
+    let url = `mailto:luis.quiroz90@gmail.com?subject=${this.subjectFormControl.value}&body=Mensaje de ${this.nameFormControl.value} \n ${this.messageFormControl.value}`;
+
+    window.location.href = url;
   }
 
 }

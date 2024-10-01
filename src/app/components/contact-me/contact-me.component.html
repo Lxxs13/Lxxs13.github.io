@@ -1,15 +1,50 @@
+<div class="div-title">
+    <span class="h1-bold">
+        <span class="span-gradient-color">Contáctame</span>
+    </span>
+</div>
 <div id="main">
-    <div id="form-main-contact">
-        <form class="form">
-            <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="text" id="email" name="email" required="">
-            </div>
-            <div class="form-group">
-                <label for="textarea">Ingrese su mensaje</label>
-                <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
-            </div>
-            <button class="form-submit-btn" type="submit">Enviar</button>
-        </form>
-    </div>
+    <form id="form-main-contact">
+        <div id="div-email-name">
+            <mat-form-field class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input type="text" matInput [formControl]="nameFormControl">
+                @if (nameFormControl.hasError('required')) {
+                <mat-error>Este campo es obligatorio</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Correo Electrónico</mat-label>
+                <input type="text" matInput [formControl]="emailFormControl">
+                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                <mat-error>Correo Electrónico invalido</mat-error>
+                }
+                @if (emailFormControl.hasError('required')) {
+                <mat-error>Este campo es obligatorio</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <mat-form-field class="full-width">
+            <mat-label>Asunto</mat-label>
+            <input type="text" matInput [formControl]="subjectFormControl">
+            @if (subjectFormControl.hasError('required')) {
+            <mat-error>Este campo es obligatorio</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Escriba su mensaje</mat-label>
+            <textarea type="text" matInput rows="5" [formControl]="messageFormControl"></textarea>
+            @if (messageFormControl.hasError('required')) {
+            <mat-error>Este campo es obligatorio</mat-error>
+            }
+        </mat-form-field>
+        <div class="div-action">
+            <a>
+                <button mat-raised-button class="button-send-email" (click)="onSendEmail()">Enviar Mensaje</button>
+            </a>
+        </div>
+    </form>
 </div>

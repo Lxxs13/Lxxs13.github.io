@@ -18,7 +18,7 @@ export class PresentationCardComponent implements OnInit {
 
   ngOnInit(): void {
     let typed = new Typed('#expert', {
-      strings: ["web apps", "proyectos frontend", "proyectos backend", "diseño UX/UI"],
+      strings: ["web apps", "proyectos frontend", "proyectos backend"],
       typeSpeed: 50,
       startDelay: 625,
       backSpeed: 100,
